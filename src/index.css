@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  max-width: auto;
+  font-family: "Inter-variable";
+  background-color: #E5E5E5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: "Inter-variable";
+  src: url("../public/Assets/Fonts/Inter-VariableFont.ttf") format("truetype");
+  font-style: italic normal oblique;
+  font-weight: 100 900;
+}

@@ -1,0 +1,37 @@
+.register-button{
+    background-color: #1E1ED2;
+    color: white;
+    padding: 5px;
+    font-family: 'Inter-variable';
+}
+.register-screen{
+    position: relative;
+    top: 60px;
+    border: 1px;
+    border: solid;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+}
+.register-screen-info{
+    text-align: center;
+    background-image: url(../../../public/Assets/Img/car-register.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 300px;
+    backdrop-filter: opacity(20%);
+}
+.register-screen-form{
+    border: 1px;
+    border-left: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    font-family: 'Inter-variable';
+}
