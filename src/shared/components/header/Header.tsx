@@ -14,10 +14,8 @@ export const Header: React.FC<Props> = ({ onLogin }) => {
       <a href="https://prototyp.digital/" className="navbar-icon"></a>
 
       <div className="navbar-right">
-        <button onClick={onLogin} className="navbar-button">
-          Configure a car
-        </button>
-        <div style={{ position: "relative" }}>
+        <button className="navbar-button">Configure a car</button>
+        <div className="navbar-hamburger">
           <Hamburger
             distance="sm"
             label="Show menu"

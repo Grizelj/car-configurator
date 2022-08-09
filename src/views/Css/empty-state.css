@@ -1,0 +1,73 @@
+.empty-state-button{
+    background-color: #1E1ED2;
+    color: white;
+    padding: 5px;
+    font-family: 'Inter-variable';
+    width: 150px;
+    height: 30px;
+    border: none;
+    margin-left: 5%;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.empty-state-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+  .empty-state-button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+  
+.empty-state-button:hover{
+    background-color: #1e48d2;
+    padding-right: 25px;
+}
+
+.empty-state-button:hover span:after {
+    opacity: 1;
+    right: -4;
+  }
+
+.empty-state-configuration{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2%;
+    margin-left: 7%;
+    margin-right: 4%;
+}
+
+.empty-state-configuration p {
+    font-size: larger;
+}
+
+.empty-state-info{
+    max-width: auto;
+    height: 500px;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty-state-info img{
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.empty-state-info-anchor{
+    text-decoration: none;
+    font-weight: bold;
+}
+

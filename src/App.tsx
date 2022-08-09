@@ -14,10 +14,7 @@ export const App: React.FC = () => {
     <Layout onLogin={() => onLogin()}>
       <Routes>
         <Route path="/home" element={<Home />} />
-        <Route path="/carConfigurations" element={<Configurator />}>
-          <Route index element={<Configurator />} />
-          <Route path=":id" element={<CarDetails />}></Route>
-        </Route>
+        <Route path="/Configurator" element={<Configurator />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
       </Routes>
