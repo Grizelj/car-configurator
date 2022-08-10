@@ -13,6 +13,12 @@ const setActive = atom<string>({
 
 export const Configurator: React.FC = () => {
   const [active, setActive] = useRecoilState(configuratorAtoms.setActive);
+  const [weight, setWeight] = useState(700);
+
+  function exterior() {
+    setActive("Exterior");
+    setWeight(700);
+  }
 
   return (
     <div>
@@ -21,7 +27,7 @@ export const Configurator: React.FC = () => {
           <span>2022</span> audi rs6 avant
         </button>
         <div className="navbar_menu">
-          <button className="button_menu" onClick={() => setActive("Exterior")}>
+          <button className="button_menu" onClick={() => exterior()}>
             01 <span>Exterior</span>
           </button>
           <button className="button_menu" onClick={() => setActive("Interior")}>
@@ -32,6 +38,7 @@ export const Configurator: React.FC = () => {
           </button>
         </div>
       </div>
+      <div></div>
       {active === "Exterior" && (
         <Exterior color="Ultra blue metallic" wheels="22''Magnesium 5-spoke" />
       )}

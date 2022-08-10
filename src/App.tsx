@@ -1,7 +1,9 @@
-import React, { useState } from "react";
-import { Link, Outlet, Route, Routes } from "react-router-dom";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import React, { useEffect, useState } from "react";
+import { Outlet, Route, Routes, useNavigate } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 import "./App.css";
+import { auth } from "./firebase";
 import { Layout } from "./shared";
 import { CarPicker, Configurator, Home, Login, Register } from "./views";
 
@@ -11,15 +13,33 @@ export const App: React.FC = () => {
   function onLogin() {
     setIsLoggedIn(!isLoggedIn);
   }
+
+  const navigate = useNavigate();
+
+  function handleLogout() {
+    signOut(auth);
+    navigate("/login");
+  }
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        navigate("/home");
+        const uid = user.uid;
+      } else {
+      }
+    });
+  });
+
   return (
     <RecoilRoot>
       <Layout onLogin={() => onLogin()}>
         <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/home" element={<Home />} />
           <Route path="/Configurator" element={<Configurator />} />
           <Route path="/CarPicker" element={<CarPicker />} />
-          <Route path="login" element={<Login />} />
-          <Route path="register" element={<Register />} />
         </Routes>
         <Outlet />
       </Layout>

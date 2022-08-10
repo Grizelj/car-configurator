@@ -3,6 +3,7 @@ import {
   onAuthStateChanged,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { auth } from "../firebase";
 import "./Css/register.css";
 
@@ -89,7 +90,7 @@ export const Register: React.FC = () => {
           Register
         </button>
         <p>
-          Already have an account? Login <a href="#">here.</a>
+          Already have an account? Login <Link to="/Login">here.</Link>
         </p>
       </div>
     </div>

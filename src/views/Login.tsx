@@ -1,11 +1,14 @@
 import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { auth } from "../firebase";
 import "./Css/register.css";
 
 export const Login: React.FC = () => {
   const [email, setEmail] = useState<string>();
   const [password, setPassword] = useState<string>();
+
+  const navigate = useNavigate();
 
   function handleLogin(e: React.FormEvent) {
     e.preventDefault();
@@ -18,28 +21,15 @@ export const Login: React.FC = () => {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        // ...
+        console.log(user);
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         console.log("Error login");
       });
+    navigate("/home");
   }
-
-  useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        // User is signed in, see docs for a list of available properties
-        // https://firebase.google.com/docs/reference/js/firebase.User
-        const uid = user.uid;
-        // ...
-      } else {
-        // User is signed out
-        // ...
-      }
-    });
-  });
 
   return (
     <div className="register_screen">
@@ -76,12 +66,12 @@ export const Login: React.FC = () => {
           </div>
         </form>
         <br />
-        <button className="register_button" onClick={handleLogin}>
+        <button className="register_button" onClick={() => handleLogin}>
           Login
         </button>
         <p>
           If you don't have an account, register{" "}
-          <a href="localhost:3000/Register">here.</a>
+          <Link to="/Register">here.</Link>
         </p>
       </div>
     </div>

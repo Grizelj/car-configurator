@@ -4,6 +4,7 @@ import { Cross as Hamburger, Divide } from "hamburger-react";
 import { useEffect, useState } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../../../firebase";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   onLogin: () => void;
@@ -12,30 +13,27 @@ interface Props {
 export const Header: React.FC<Props> = ({ onLogin }) => {
   const [opened, setOpened] = useState(false);
 
-  function handleLogout() {
-    signOut(auth);
+  const navigate = useNavigate();
+  function logOut() {
+    navigate("/Login");
+    setOpened(false);
   }
-
-  useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        // User is signed in, see docs for a list of available properties
-        // https://firebase.google.com/docs/reference/js/firebase.User
-        const uid = user.uid;
-        // ...
-      } else {
-        // User is signed out
-        // ...
-      }
-    });
-  });
+  function mySavedConfig() {
+    navigate("/home");
+    setOpened(false);
+  }
 
   return (
     <header className="navbar">
       <a href="https://prototyp.digital/" className="navbar-icon"></a>
 
       <div className="navbar-right">
-        <button className="navbar-button">Configure a car</button>
+        <button
+          className="navbar-button"
+          onClick={() => navigate("/CarPicker")}
+        >
+          Configure a car
+        </button>
         <div className="navbar-hamburger">
           <Hamburger
             distance="sm"
@@ -52,8 +50,10 @@ export const Header: React.FC<Props> = ({ onLogin }) => {
           />
           {opened && (
             <div className="navbar-menu">
-              <button>My saved configurations</button>
-              <button onClick={handleLogout}>Logout</button>
+              <button onClick={() => mySavedConfig()}>
+                My saved configurations
+              </button>
+              <button onClick={(handleLogout) => logOut()}>Logout</button>
             </div>
           )}
         </div>

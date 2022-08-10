@@ -8,8 +8,26 @@ interface Props {
   wheels: string;
 }
 
+const colorOptions = [
+  { value: "", label: "" },
+  { value: "", label: "" },
+  { value: "", label: "" },
+];
+
 const Exterior: React.FC<Props> = ({ color, wheels }) => {
   const [active, setActive] = useRecoilState(configuratorAtoms.setActive);
+
+  const [selectValue, setSelectValue] = useState<string>("");
+  const selectRef = React.useRef();
+
+  const handleChange = (selectValue) => {
+    setSelectValue(selectValue);
+  };
+  const onClick = () => {
+    if (selectRef.current) {
+      selectRef.current.focus();
+    }
+  };
 
   return (
     <div className="exterior_car_menu">
