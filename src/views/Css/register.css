@@ -64,7 +64,7 @@
 	top:0px;
 	left:0px;
 	font-size:16px;
-	color:#fff;	
+	color:rgba(73, 73, 73, 0.445);	
     pointer-event:none;
 	transition: all 0.5s ease-in-out;
 }
@@ -76,7 +76,7 @@
     width:100%;
     padding:8px 0 5px 0;
     font-size:16px;
-    color:#fff;
+    color:rgb(104, 103, 103);
   }
 
   .form_input input:focus{ 

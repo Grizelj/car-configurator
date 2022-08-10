@@ -1,0 +1,84 @@
+.car-display{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.car-full-display{
+    margin-top: 4%;
+    margin-left: 15%;
+}
+
+.car-display h2{
+    color: rgba(163, 163, 163, 0.733);
+    margin-bottom: 2%;
+}
+.car-display h1{
+    margin-top: 1%;
+    text-transform: uppercase;
+    margin-bottom: 8%;
+}
+
+.card{
+    align-items: center;
+    margin-right: 15%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: rgba(255, 255, 255, 0.438);
+    height: 500px;
+    width: 350px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 7px;
+}
+
+.car-button{
+    background-color: #1E1ED2;
+    color: white;
+    padding: 5px;
+    font-family: 'Inter-variable';
+    width: 150px;
+    height: 30px;
+    border: none;
+    margin-left: 5%;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.car-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+  .car-button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+  
+.car-button:hover{
+    background-color: #1e48d2;
+    padding-right: 25px;
+}
+
+.car-button:hover span:after {
+    opacity: 1;
+    right: -4;
+  }
+
+.car-full-display-info :first-child{
+    font-size: large;
+    font-weight: 500;
+
+}
+
+.car-full-display-info :last-child{
+    color: #858585b0;
+    font-size: small;
+}

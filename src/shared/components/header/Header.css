@@ -40,7 +40,7 @@
     position: absolute;
     top: 50px;
     right: 0px;
-    max-width: 300px;
+    width: 250px;
     max-height: 100px;
     background-color: white;
     outline: 1px;
@@ -57,14 +57,6 @@
     transition: 0.5s;
 }
 
-.navbar-menu a{
-    color: #3F3FE4;
-    font-size: medium;
-    text-decoration: none;
-    width: 200px;
-    padding: 3px;
-    z-index: 3;
-}
 
 .navbar-menu:first-child(a){
     border-bottom: 0.5px solid gray;
@@ -81,4 +73,19 @@
     position: relative;
     margin-left: 20px;
     margin-right: 10px;
+}
+
+.navbar-menu button{
+    border: none;
+    background-color: white;
+    color: #3F3FE4;
+    font-family: 'Inter-variable';
+    cursor: pointer;
+    text-align: left;
+    font-size: medium;
+}
+
+.navbar-menu button:first-child{
+    border-bottom: solid 0.3px rgba(0, 0, 255, 0.384);
+   padding-bottom: 5px;
 }

@@ -1,78 +1,52 @@
-.car-display{
+.configurator_navbar{
+    background-color: rgba(255, 255, 255, 0.644);
+    max-height: 45px;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: space-around;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: solid 0.3px rgba(128, 128, 128, 0.274);
 }
 
-.car-full-display{
-    margin-top: 4%;
-    margin-left: 15%;
+.navbar_menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: -20%;
 }
 
-.car-display h2{
-    color: rgba(163, 163, 163, 0.733);
-    margin-bottom: 2%;
-}
-.car-display h1{
-    margin-top: 1%;
-    text-transform: uppercase;
-    margin-bottom: 8%;
-}
-
-.card{
-    align-items: center;
-    margin-right: 15%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-.car-button{
-    background-color: #1E1ED2;
-    color: white;
+.button_menu{
     padding: 5px;
+    margin-left: 5px;
+    margin-right: 15px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.589);
     font-family: 'Inter-variable';
-    width: 150px;
-    height: 30px;
-    border: none;
-    margin-left: 5%;
-    transition: all 0.5s;
-    cursor: pointer;
-}
-
-.car-button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-}
-
-  .car-button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-}
-  
-  
-.car-button:hover{
-    background-color: #1e48d2;
-    padding-right: 25px;
-}
-
-.car-button:hover span:after {
-    opacity: 1;
-    right: -4;
-  }
-
-.car-full-display-info :first-child{
-    font-size: large;
-    font-weight: 500;
-
-}
-
-.car-full-display-info :last-child{
-    color: #858585b0;
     font-size: small;
+    border: none;
+    background-color:rgba(212, 212, 212, 0.041);
+    cursor: pointer;
 }
+
+.navbar_menu span{
+    color: rgba(0, 0, 0, 0.247);
+    font-family: 'Inter-variable';
+    margin-right: 3px;
+}
+
+.navbar_back_button{
+    background-color: rgba(212, 212, 212, 0.041);
+    border: none;
+    margin-left: -20%;
+    text-transform: uppercase;
+    font-family: 'Inter-variable';
+    font-weight: 750;
+    font-size: medium;
+    cursor: pointer;
+}
+
+.navbar_back_button span{
+    color: rgba(153, 153, 153, 0.562);
+}
+

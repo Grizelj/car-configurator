@@ -1,38 +1,42 @@
 import "./Css/configurator.css";
+import Exterior from "./../modules/configurator/components/exterior/Exterior";
+import Interior from "../modules/configurator/components/Interior/Interior";
+import Summary from "../modules/configurator/components/summary/Summary";
+import React, { useState } from "react";
+import { atom, useRecoilState, useRecoilValue } from "recoil";
+import { configuratorAtoms } from "../shared";
+
+const setActive = atom<string>({
+  key: "setActive",
+  default: "Exterior",
+});
 
 export const Configurator: React.FC = () => {
+  const [active, setActive] = useRecoilState(configuratorAtoms.setActive);
+
   return (
-    <div className="car-full-display">
-      <div className="car-full-display-info">
-        <p>Configure a car</p>
-        <p>Pick your favorite model and start configuring.</p>
-      </div>
-      <div className="car-display">
-        <div className="card">
-          <img src="../../public/Assets/Img/Audi RS6.png" />
-          <h2>2022</h2>
-          <h1>audi rs6 avant</h1>
-          <button className="car-button">
-            <span>Configure now </span>
+    <div>
+      <div className="configurator_navbar">
+        <button className="navbar_back_button">
+          <span>2022</span> audi rs6 avant
+        </button>
+        <div className="navbar_menu">
+          <button className="button_menu" onClick={() => setActive("Exterior")}>
+            01 <span>Exterior</span>
           </button>
-        </div>
-        <div className="card">
-          <img src="../../public/Assets/Img/Audi RS5.png" />
-          <h2>2022</h2>
-          <h1>audi rs5</h1>
-          <button className="car-button">
-            <span>Configure now </span>
+          <button className="button_menu" onClick={() => setActive("Interior")}>
+            02 <span>Interior</span>
           </button>
-        </div>
-        <div className="card">
-          <img src="../../public/Assets/Img/Audi e-Tron GT.png" />
-          <h2>2022</h2>
-          <h1>audi e-tron gt</h1>
-          <button className="car-button">
-            <span>Configure now </span>
+          <button className="button_menu" onClick={() => setActive("Summary")}>
+            03 <span>Summary</span>
           </button>
         </div>
       </div>
+      {active === "Exterior" && (
+        <Exterior color="Ultra blue metallic" wheels="22''Magnesium 5-spoke" />
+      )}
+      {active === "Interior" && <Interior color="Brown" />}
+      {active === "Summary" && <Summary />}
     </div>
   );
 };

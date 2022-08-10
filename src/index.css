@@ -1,6 +1,11 @@
 body {
   margin: 0;
   max-width: auto;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
   font-family: "Inter-variable";
   background-color: #E5E5E5;
   -webkit-font-smoothing: antialiased;
