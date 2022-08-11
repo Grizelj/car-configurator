@@ -5,4 +5,35 @@ const setActive = atom<string>({
   default: "Exterior",
 });
 
-export const configuratorAtoms = { setActive };
+const setPaint = atom<string>({
+  key: "setPaint",
+  default: "Black",
+});
+
+const setCar = atom<string>({
+  key: "setCar",
+  default: "rs6",
+});
+
+const setWheel = atom<string>({
+  key: "setWheel",
+  default: "RS6One",
+});
+
+const setInterior = atom<string>({
+  key: "setInterior",
+  default: "Black&grey",
+});
+
+const setCarousel = atom<number>({
+  key: "setCarousel",
+  default: 1,
+});
+export const configuratorAtoms = {
+  setActive,
+  setPaint,
+  setCar,
+  setWheel,
+  setInterior,
+  setCarousel,
+};

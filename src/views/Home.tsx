@@ -16,7 +16,7 @@ export const Home: React.FC = () => {
       </div>
       <div className="empty-state-wrapper">
         <div className="empty-state-info">
-          <img src="../../public/Assets/Img/car-register.png" />
+          <img src="/Assets/Img/car-register.png" />
           <p>
             You haven't configured any cars yet. You may choose to{" "}
             <Link to="/CarPicker">configure some now.</Link>

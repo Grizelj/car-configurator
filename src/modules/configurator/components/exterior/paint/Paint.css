@@ -1,37 +1,18 @@
-.interior_layout{
-    display: flex;
-    flex-direction: row;
-}
-
-.carousel_display{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10%;
-    margin-top: 10%;
-}
-
-.carousel_display img{
-    max-width: 1200px;
-    max-height: 400px;
-}
-
-
-.interior_car_menu{
+.paint_car_menu{
+    position: absolute;
+    right: 0;
+    bottom: 0;
     display: flex;
     flex-direction: column;
     float: right;
-    position: absolute;
-    right: 0;
     width: 20%;
-    height:100vh;
+    height:90%;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.644);
     border-left: solid 0.3px rgba(128, 128, 128, 0.274);
 }
 
-.interior_next_button{
+.paint_next_button{
     background-color: #1E1ED2;
     color: white;
     padding: 5px;
@@ -44,14 +25,14 @@
     font-size: medium;
 }
 
-.interior_next_button span {
+.paint_next_button span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
 }
 
-  .interior_next_button span:after {
+  .paint_next_button span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -60,23 +41,23 @@
     transition: 0.5s;
 }
 
-.interior_next_button:hover{
+.paint_next_button:hover{
     background-color: #1e48d2;
     padding-right: 25px;
 }
 
-.interior_next_button:hover span:after {
+.paint_next_button:hover span:after {
     opacity: 1;
     right: -4;
   }
 
-.interior_bottom_menu{
+.paint_bottom_menu{
     position: absolute;
     bottom: 0px;
     width: 20%;
 }
 
-.interior_menu_info{
+.paint_menu_info{
     display: flex;
     flex-direction: row;
     margin: 2px;
@@ -85,23 +66,25 @@
     font-family: 'Inter-variable';
 }
 
-.interior_menu_info:hover{
+.paint_menu_info:hover{
     background-color: rgba(201, 201, 201, 0.548);
 }
 
-.interior_menu_info p:last-child{
+.paint_menu_info p:last-child{
     color: rgba(0, 0, 0, 0.26);
     text-transform: uppercase;
     margin-top: -5px;
     font-size: smaller;
 }
 
-.interior_menu_info img{
+.paint_menu_info img{
     border-radius: 50px;
     width: 50px;
     height: 50px;
     margin-right: 10px;
     margin-top: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
     
 }
 
@@ -117,6 +100,7 @@
     text-transform: uppercase;
     color: #1e6cd293;
 }
-.total_info:hover{
-    
+
+.navbar_menu span:first-child{
+    font-weight: bold;
 }
