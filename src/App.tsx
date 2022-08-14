@@ -24,7 +24,6 @@ export const App: React.FC = () => {
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        navigate("/home");
         const uid = user.uid;
       } else {
       }

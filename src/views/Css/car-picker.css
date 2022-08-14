@@ -6,7 +6,25 @@
 
 .car-full-display{
     margin-top: 4%;
-    margin-left: 15%;
+    margin-left: 10%;
+    animation: fadeInFromNone 0.7s ease-out;
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
 }
 
 .car-display h2{
@@ -21,24 +39,33 @@
 
 .card{
     align-items: center;
-    margin-right: 15%;
+    margin-right: 13%;
     margin-top: 5%;
     margin-bottom: 5%;
     background-color: rgba(255, 255, 255, 0.438);
-    height: 500px;
+    max-height: 800px;
     width: 350px;
     align-items: center;
     justify-content: center;
-    padding-left: 7px;
+    padding-bottom: 15px;
+}
+
+.card :not(:first-child){
+    padding-left: 15px;
+}
+
+.card img{
+    max-width: 300px;
+    max-height: 400px;
 }
 
 .car-button{
     background-color: #1E1ED2;
     color: white;
-    padding: 5px;
+    padding: 11px;
     font-family: 'Inter-variable';
     width: 150px;
-    height: 30px;
+    height: 40px;
     border: none;
     margin-left: 5%;
     transition: all 0.5s;

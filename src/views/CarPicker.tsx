@@ -8,6 +8,7 @@ export const CarPicker: React.FC = () => {
   const [car, setCar] = useRecoilState(configuratorAtoms.setCar);
   const [paint, setPaint] = useRecoilState(configuratorAtoms.setPaint);
   const [wheel, setWheel] = useRecoilState(configuratorAtoms.setWheel);
+  const [interior, setInterior] = useRecoilState(configuratorAtoms.setInterior);
   const navigate = useNavigate();
 
   return (
@@ -28,6 +29,7 @@ export const CarPicker: React.FC = () => {
               setCar("AUDI RS6 AVANT");
               setPaint("Ultra Blue");
               setWheel("RS6One");
+              setInterior("Black&grey");
             }}
           >
             <span>Configure now </span>
@@ -44,6 +46,7 @@ export const CarPicker: React.FC = () => {
               setCar("AUDI RS5");
               setPaint("Nardo Gay");
               setWheel("RS5One");
+              setInterior("Black&red");
             }}
           >
             <span>Configure now </span>
@@ -60,6 +63,7 @@ export const CarPicker: React.FC = () => {
               setCar("AUDI E-TRON GT");
               setPaint("Tactical Green");
               setWheel("e-tronOne");
+              setInterior("Black-1");
             }}
           >
             <span>Configure now </span>

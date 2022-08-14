@@ -1,7 +1,26 @@
 .interior_layout{
     display: flex;
     flex-direction: row;
+    animation: fadeInFromNone 0.7s ease-out;
 }
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
 
 .carousel_display{
     display: flex;
@@ -24,8 +43,9 @@
     float: right;
     position: absolute;
     right: 0;
+    bottom: 0;
     width: 20%;
-    height:100vh;
+    top: 97px;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.644);
     border-left: solid 0.3px rgba(128, 128, 128, 0.274);

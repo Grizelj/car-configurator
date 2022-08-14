@@ -1,17 +1,21 @@
 import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
+import { useRecoilState } from "recoil";
 import { auth } from "../firebase";
+import { configuratorAtoms } from "../shared";
 import "./Css/register.css";
 
 export const Login: React.FC = () => {
   const [email, setEmail] = useState<string>();
   const [password, setPassword] = useState<string>();
+  const [user, setUser] = useRecoilState(configuratorAtoms.setUser);
 
   const navigate = useNavigate();
 
   function handleLogin(e: React.FormEvent) {
     e.preventDefault();
+
     if (!email || !password) {
       console.log("error");
       return;
@@ -20,7 +24,9 @@ export const Login: React.FC = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
+        navigate("/home");
         const user = userCredential.user;
+        setUser(uid);
         console.log(user);
       })
       .catch((error) => {
@@ -28,7 +34,6 @@ export const Login: React.FC = () => {
         const errorMessage = error.message;
         console.log("Error login");
       });
-    navigate("/home");
   }
 
   return (
@@ -66,7 +71,7 @@ export const Login: React.FC = () => {
           </div>
         </form>
         <br />
-        <button className="register_button" onClick={() => handleLogin}>
+        <button className="register_button" onClick={handleLogin}>
           Login
         </button>
         <p>

@@ -8,12 +8,13 @@ const Paint: React.FC = ({}) => {
   const [openPaint, setOpenPaint] = useState(Boolean);
   const [car, setCar] = useRecoilState(configuratorAtoms.setCar);
   const [paint, setPaint] = useRecoilState(configuratorAtoms.setPaint);
-  const [wheel, setWheel] = useRecoilState(configuratorAtoms.setWheel);
 
   return (
     <div className="paint_car_menu">
       {car === "AUDI RS6 AVANT" && (
         <div className="paint_top_menu">
+          <p>Paint color</p>
+          <span>X</span>
           <div
             className="paint_menu_info"
             onClick={() => setPaint("Ultra Blue")}

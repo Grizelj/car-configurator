@@ -10,9 +10,6 @@ import { useNavigate } from "react-router-dom";
 export const Configurator: React.FC = () => {
   const [active, setActive] = useRecoilState(configuratorAtoms.setActive);
   const [car, setCar] = useRecoilState(configuratorAtoms.setCar);
-  const [paint, setPaint] = useRecoilState(configuratorAtoms.setPaint);
-  const [wheel, setWheel] = useRecoilState(configuratorAtoms.setWheel);
-  const [interior, setInterior] = useRecoilState(configuratorAtoms.setInterior);
 
   const navigate = useNavigate();
 
@@ -37,10 +34,11 @@ export const Configurator: React.FC = () => {
           </button>
         </div>
       </div>
-      <div></div>
-      {active === "Exterior" && <Exterior />}
-      {active === "Interior" && <Interior />}
-      {active === "Summary" && <Summary />}
+      <div className="config_view">
+        {active === "Exterior" && <Exterior />}
+        {active === "Interior" && <Interior />}
+        {active === "Summary" && <Summary />}
+      </div>
     </div>
   );
 };

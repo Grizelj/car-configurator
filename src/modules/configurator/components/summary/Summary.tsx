@@ -1,16 +1,61 @@
-import React, { useState } from "react";
+import { setMaxListeners } from "events";
+import {
+  addDoc,
+  collection,
+  onSnapshot,
+  query,
+  QuerySnapshot,
+} from "firebase/firestore";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useGetRecoilValueInfo_UNSTABLE, useRecoilState } from "recoil";
+import { db } from "../../../../firebase";
 import { configuratorAtoms } from "../../../../shared";
 import Carousel from "../carousel/Carousel";
 import "./Summary.css";
 
 const Summary: React.FC = ({}) => {
+  const [cars, setCars] = useState<Car[]>();
   const [active, setActive] = useRecoilState(configuratorAtoms.setActive);
   const [car, setCar] = useRecoilState(configuratorAtoms.setCar);
   const [paint, setPaint] = useRecoilState(configuratorAtoms.setPaint);
   const [wheel, setWheel] = useRecoilState(configuratorAtoms.setWheel);
   const [interior, setInterior] = useRecoilState(configuratorAtoms.setInterior);
   const [carousel, setCarousel] = useRecoilState(configuratorAtoms.setCarousel);
+
+  interface Car {
+    car: string;
+    paint: string;
+    wheel: string;
+    interior: string;
+  }
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    setListener();
+  }, []);
+
+  function setListener() {
+    const q = query(collection(db, "cars"));
+
+    const unsubscribe = onSnapshot(q, (QuerySnapshot) => {
+      const cars = QuerySnapshot.docs.map((item) => item.data()) as Car[];
+
+      setCars(cars);
+    });
+  }
+
+  async function handleClick() {
+    const docRef = await addDoc(collection(db, "cars"), {
+      car: car,
+      paint: paint,
+      wheel: wheel,
+      interior: interior,
+    });
+    console.log(docRef);
+    navigate("/home");
+  }
 
   return (
     <div className="summary">
@@ -151,7 +196,7 @@ const Summary: React.FC = ({}) => {
         <div className="footer_save_config">
           <p>total</p>
           <p>PPRICE</p>
-          <button className="save_config_button">
+          <button className="save_config_button" onClick={handleClick}>
             <span>Save your configuration</span>
           </button>
         </div>
@@ -159,5 +204,3 @@ const Summary: React.FC = ({}) => {
     </div>
   );
 };
-
-export default Summary;

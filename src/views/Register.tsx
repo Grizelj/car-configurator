@@ -3,15 +3,18 @@ import {
   onAuthStateChanged,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useRecoilState } from "recoil";
 import { auth } from "../firebase";
+import { configuratorAtoms } from "../shared";
 import "./Css/register.css";
 
 export const Register: React.FC = () => {
   const [email, setEmail] = useState<string>();
   const [password, setPassword] = useState<string>();
-  const [regEmail, setRegEmail] = useState<string>();
-  const [regPassword, setRegPassword] = useState<string>();
+  const [user, setUser] = useRecoilState(configuratorAtoms.setUser);
+
+  const navigate = useNavigate();
 
   function handleSubmit(f: React.FormEvent) {
     f.preventDefault();
@@ -23,7 +26,8 @@ export const Register: React.FC = () => {
 
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        // Signed in
+        navigate("/home");
+
         const user = userCredential.user;
         // ...
       })
@@ -33,8 +37,6 @@ export const Register: React.FC = () => {
         console.log("error");
         // ..
       });
-
-    console.log("dadadada");
   }
 
   useEffect(() => {
@@ -63,8 +65,8 @@ export const Register: React.FC = () => {
         <form>
           <div className="form_input">
             <input
-              value={regEmail}
-              onChange={(f) => setRegEmail(f.currentTarget.value)}
+              value={email}
+              onChange={(f) => setEmail(f.currentTarget.value)}
               type="email"
               name="email"
             />
@@ -75,8 +77,8 @@ export const Register: React.FC = () => {
           <br />
           <div className="form_input">
             <input
-              value={regPassword}
-              onChange={(f) => setRegPassword(f.currentTarget.value)}
+              value={password}
+              onChange={(f) => setPassword(f.currentTarget.value)}
               type="password"
               name="password"
             />

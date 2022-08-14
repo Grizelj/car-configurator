@@ -14,7 +14,8 @@ export const Header: React.FC<Props> = ({ onLogin }) => {
   const [opened, setOpened] = useState(false);
 
   const navigate = useNavigate();
-  function logOut() {
+  function handleLogOut() {
+    signOut(auth);
     navigate("/Login");
     setOpened(false);
   }
@@ -53,7 +54,7 @@ export const Header: React.FC<Props> = ({ onLogin }) => {
               <button onClick={() => mySavedConfig()}>
                 My saved configurations
               </button>
-              <button onClick={(handleLogout) => logOut()}>Logout</button>
+              <button onClick={() => handleLogOut()}>Logout</button>
             </div>
           )}
         </div>

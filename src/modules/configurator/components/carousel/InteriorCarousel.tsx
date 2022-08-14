@@ -70,6 +70,50 @@ const Paint: React.FC = ({}) => {
           src="/Assets2/Car=RS5, Color=Lunar Silver, View=Dash.png"
         />
       )}
+      {car === "AUDI RS6 AVANT" &&
+        interior === "Black&red" &&
+        carousel === 1 && (
+          <img
+            className="carouselImg"
+            src="/Assets2/Car=RS6, Color=Black&red, View=Seats.png"
+          />
+        )}
+      {car === "AUDI RS6 AVANT" &&
+        interior === "Black&red" &&
+        carousel === 2 && (
+          <img
+            className="carouselImg"
+            src="/Assets2/Car=RS6, Color=Black&red, View=Dash.png"
+          />
+        )}
+      {car === "AUDI RS6 AVANT" &&
+        interior === "Black&grey" &&
+        carousel === 1 && (
+          <img
+            className="carouselImg"
+            src="/Assets2/Car=RS6, Color=Black&grey, View=Seats.png"
+          />
+        )}
+      {car === "AUDI RS6 AVANT" &&
+        interior === "Black&grey" &&
+        carousel === 2 && (
+          <img
+            className="carouselImg"
+            src="/Assets2/Car=RS6, Color=Black&grey, View=Dash.png"
+          />
+        )}
+      {car === "AUDI RS6 AVANT" && interior === "Brown" && carousel === 1 && (
+        <img
+          className="carouselImg"
+          src="/Assets2/Car=RS6, Color=Brown, View=Seats.png"
+        />
+      )}
+      {car === "AUDI RS6 AVANT" && interior === "Brown" && carousel === 2 && (
+        <img
+          className="carouselImg"
+          src="/Assets2/Car=RS6, Color=Brown, View=Dash.png"
+        />
+      )}
     </div>
   );
 };

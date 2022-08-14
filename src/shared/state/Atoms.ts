@@ -29,6 +29,11 @@ const setCarousel = atom<number>({
   key: "setCarousel",
   default: 1,
 });
+
+const setUser = atom<string>({
+  key: "setUser",
+  default: "",
+});
 export const configuratorAtoms = {
   setActive,
   setPaint,
@@ -36,4 +41,5 @@ export const configuratorAtoms = {
   setWheel,
   setInterior,
   setCarousel,
+  setUser,
 };
