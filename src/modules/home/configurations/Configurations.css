@@ -1,0 +1,111 @@
+.renderCars{
+        position: relative;
+        top: 100px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-bottom: 2%;
+        height: 230px;
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+}
+
+.renderCars_info{
+    display: flex;
+    flex-direction: column;
+    border-left: solid 0.7px rgba(153, 153, 153, 0.596);
+    width: 1200px;
+    padding-left: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: 'Inter-variable';
+}
+
+.renderCars_info :first-child{
+    margin-top: 2px;
+    color: rgba(126, 126, 126, 0.521);  
+}
+.renderCars_info :last-child{
+    margin-top: 2px;
+    color: rgba(165, 165, 165, 0.61);  
+}
+
+.renderCars_info h2{
+    margin-top: 2px;
+    color: #3F3FE4;
+}
+
+.renderCars_info p{
+    margin-top: 2px;
+    text-transform: uppercase;
+    color: rgba(85, 85, 85, 0.521); 
+}
+
+.configurationsImg{
+    margin-top: 2px;
+    height: 200px;
+    width: 600px;
+}
+
+.renderCars_menu{
+    offset-rotate: 90deg;
+    font-size: 50px;
+    color: #1e48d273
+}
+
+.configurations-hamburger{
+    position: relative;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.configurations-menu{
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    width: 170px;
+    max-height: 130px;
+    background-color: white;
+    outline: 1px;
+    outline-color: gray;
+    font-size: 21px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation: fadeInFromNone 0.7s ease-out;
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+
+.configurations-menu :last-child{
+    border-top: 0.5px solid rgba(128, 128, 128, 0.568);
+    color: rgba(255, 0, 0, 0.637);
+}
+
+.configurations-menu button{
+    border: none;
+    background-color: white;
+    color: #3F3FE4;
+    font-family: 'Inter-variable';
+    cursor: pointer;
+    text-align: left;
+    font-size: medium;
+}

@@ -6,7 +6,6 @@ const Carousel: React.FC = ({}) => {
   const [car, setCar] = useRecoilState(configuratorAtoms.setCar);
   const [paint, setPaint] = useRecoilState(configuratorAtoms.setPaint);
   const [wheel, setWheel] = useRecoilState(configuratorAtoms.setWheel);
-  const [interior, setInterior] = useRecoilState(configuratorAtoms.setInterior);
   const [carousel, setCarousel] = useRecoilState(configuratorAtoms.setCarousel);
 
   type CarouselProps = {

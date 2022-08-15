@@ -1,34 +1,34 @@
-import { setMaxListeners } from "events";
 import {
   addDoc,
   collection,
   onSnapshot,
   query,
-  QuerySnapshot,
+  Timestamp,
 } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useGetRecoilValueInfo_UNSTABLE, useRecoilState } from "recoil";
-import { db } from "../../../../firebase";
+import firebase, { db } from "../../../../firebase";
 import { configuratorAtoms } from "../../../../shared";
 import Carousel from "../carousel/Carousel";
 import "./Summary.css";
 
+interface Vehicle {
+  name: string;
+  paint: string;
+  wheel: string;
+  interior: string;
+  date: Date;
+}
+
 const Summary: React.FC = ({}) => {
-  const [cars, setCars] = useState<Car[]>();
+  const [cars, setCars] = useState<Vehicle[]>();
   const [active, setActive] = useRecoilState(configuratorAtoms.setActive);
   const [car, setCar] = useRecoilState(configuratorAtoms.setCar);
   const [paint, setPaint] = useRecoilState(configuratorAtoms.setPaint);
   const [wheel, setWheel] = useRecoilState(configuratorAtoms.setWheel);
   const [interior, setInterior] = useRecoilState(configuratorAtoms.setInterior);
   const [carousel, setCarousel] = useRecoilState(configuratorAtoms.setCarousel);
-
-  interface Car {
-    car: string;
-    paint: string;
-    wheel: string;
-    interior: string;
-  }
 
   const navigate = useNavigate();
 
@@ -37,25 +37,33 @@ const Summary: React.FC = ({}) => {
   }, []);
 
   function setListener() {
-    const q = query(collection(db, "cars"));
+    const q = query(collection(db, "vehicles"));
 
-    const unsubscribe = onSnapshot(q, (QuerySnapshot) => {
-      const cars = QuerySnapshot.docs.map((item) => item.data()) as Car[];
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      const vehicles = querySnapshot.docs.map((item) =>
+        item.data()
+      ) as Vehicle[];
 
-      setCars(cars);
+      setCars(vehicles);
     });
   }
 
   async function handleClick() {
-    const docRef = await addDoc(collection(db, "cars"), {
-      car: car,
+    const docRef = await addDoc(collection(db, "vehicles"), {
+      name: car,
       paint: paint,
       wheel: wheel,
       interior: interior,
+      date: getDate(),
     });
     console.log(docRef);
     navigate("/home");
   }
+
+  const getDate = () => {
+    const now = Timestamp.now().toDate().toString();
+    return now;
+  };
 
   return (
     <div className="summary">
@@ -195,7 +203,7 @@ const Summary: React.FC = ({}) => {
         </div>
         <div className="footer_save_config">
           <p>total</p>
-          <p>PPRICE</p>
+          <p>PRICE</p>
           <button className="save_config_button" onClick={handleClick}>
             <span>Save your configuration</span>
           </button>
@@ -204,3 +212,5 @@ const Summary: React.FC = ({}) => {
     </div>
   );
 };
+
+export default Summary;
