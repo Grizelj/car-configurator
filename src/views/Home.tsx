@@ -26,7 +26,6 @@ export const Home: React.FC = () => {
   const [user] = useRecoilState(configuratorAtoms.setUser);
   const [active, setActive] = useRecoilState(configuratorAtoms.setActive);
   const navigate = useNavigate();
-  console.log(user);
 
   useEffect(() => {
     setListener();
@@ -56,7 +55,6 @@ export const Home: React.FC = () => {
     });
   });
 
-  console.log(Object.keys(vehicles).length);
   return (
     <div className="empty-state-home">
       <div className="empty-state-configuration">

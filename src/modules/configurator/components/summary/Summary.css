@@ -31,11 +31,15 @@
 .car_label{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     border-bottom: solid 0.3px rgba(173, 173, 173, 0.452);
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 3%;
+}
+
+.car_label div:first-child{
+    justify-content: flex-start;
 }
 
 .car_label div:first-child p:first-child{

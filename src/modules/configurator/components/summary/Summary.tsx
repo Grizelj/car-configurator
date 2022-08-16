@@ -84,8 +84,6 @@ const Summary: React.FC = ({}) => {
       },
     };
     const docRef = await setDoc(doc(db, "vehicles", user), tempData);
-    console.log(user);
-    console.log(docRef);
     navigate("/home");
   }
 
@@ -93,8 +91,6 @@ const Summary: React.FC = ({}) => {
     const now = Timestamp.now().toDate();
     return now;
   };
-
-  console.log(carEditToId);
 
   return (
     <div className="summary">

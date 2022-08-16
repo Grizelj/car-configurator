@@ -46,7 +46,6 @@ const ConfigurationsCarousel: React.FC = ({ vehicles }) => {
     navigate("/configurator");
   }
 
-  console.log(vehicles);
   return (
     <>
       {vehicles &&

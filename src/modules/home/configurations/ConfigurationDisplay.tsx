@@ -55,7 +55,7 @@ const ConfigurationDisplay = (props: Props) => {
   function ConfigurationsCarousel(props: ConfigurationsCarouselProps) {
     return <div>{props.children}</div>;
   }
-  console.log(carData, id);
+
   return (
     <div key={id}>
       <ConfigurationsCarousel>
