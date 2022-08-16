@@ -1,4 +1,3 @@
-export * from "./CarDetails";
 export * from "./CarPicker";
 export * from "./Home";
 export * from "./Login";

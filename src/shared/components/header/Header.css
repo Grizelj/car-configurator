@@ -49,6 +49,7 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
+    z-index: 3;
 }
 
 .navbar-hamburger:hover{

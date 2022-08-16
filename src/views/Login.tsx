@@ -26,8 +26,7 @@ export const Login: React.FC = () => {
         // Signed in
         navigate("/home");
         const user = userCredential.user;
-        setUser(uid);
-        console.log(user);
+        setUser(user.uid);
       })
       .catch((error) => {
         const errorCode = error.code;

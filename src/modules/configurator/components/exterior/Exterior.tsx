@@ -23,8 +23,8 @@ const Exterior: React.FC = ({}) => {
           <span
             className="arrow left"
             onClick={() => setCarousel(carousel - 1)}
-          ></span>{" "}
-          {carousel} / 5{" "}
+          ></span>
+          <span className="no_select"> {carousel} / 5 </span>
           <span
             className="arrow right"
             onClick={() => setCarousel(carousel + 1)}
@@ -68,22 +68,22 @@ const Exterior: React.FC = ({}) => {
             className="exterior_menu_info"
             onClick={() => setOpenWheel(true)}
           >
-            {wheel === "RS6One" && (
+            {wheel === "One" && car === "AUDI RS6 AVANT" && (
               <img src="/Assets2/Car=RS6, Style=One.png" />
             )}
-            {wheel === "RS6Two" && (
+            {wheel === "Two" && car === "AUDI RS6 AVANT" && (
               <img src="/Assets2/Car=RS6, Style=Two.png" />
             )}
-            {wheel === "RS5One" && (
+            {wheel === "One" && car === "AUDI RS5" && (
               <img src="/Assets2/Car=RS5, Style=One.png" />
             )}
-            {wheel === "RS5Two" && (
+            {wheel === "Two" && car === "AUDI RS5" && (
               <img src="/Assets2/Car=RS5, Style=Two.png" />
             )}
-            {wheel === "e-tronOne" && (
+            {wheel === "One" && car === "AUDI E-TRON GT" && (
               <img src="/Assets2/Car=e-tron, Style=One.png" />
             )}
-            {wheel === "e-tronTwo" && (
+            {wheel === "Two" && car === "AUDI E-TRON GT" && (
               <img src="/Assets2/Car=e-tron, Style=Two.png" />
             )}
             <div>
@@ -104,8 +104,8 @@ const Exterior: React.FC = ({}) => {
             <span>Interior </span>
           </button>
         </div>
-        {openPaint === true && <Paint />}
-        {openWheel === true && <Wheel />}
+        {openPaint && <Paint setOpen={setOpenPaint} />}
+        {openWheel && <Wheel setOpen={setOpenWheel} />}
       </div>
     </div>
   );

@@ -5,13 +5,12 @@ import "./Layout.styles.css";
 
 interface LayoutProps {
   children: React.ReactNode;
-  onLogin: () => void;
 }
 
-export const Layout: React.FC<LayoutProps> = ({ children, onLogin }) => {
+export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <main className="layout">
-      <Header onLogin={onLogin} />
+      <Header />
       {children}
     </main>
   );

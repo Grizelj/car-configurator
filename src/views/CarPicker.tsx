@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import { onAuthStateChanged } from "firebase/auth";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useRecoilState } from "recoil";
+import { auth } from "../firebase";
 import { configuratorAtoms } from "../shared";
 import "./Css/car-picker.css";
 
@@ -10,6 +12,17 @@ export const CarPicker: React.FC = () => {
   const [wheel, setWheel] = useRecoilState(configuratorAtoms.setWheel);
   const [interior, setInterior] = useRecoilState(configuratorAtoms.setInterior);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const uid = user.uid;
+        // ...
+      } else {
+        navigate("/login");
+      }
+    });
+  });
 
   return (
     <div className="car-full-display">
@@ -28,7 +41,7 @@ export const CarPicker: React.FC = () => {
               navigate("/Configurator");
               setCar("AUDI RS6 AVANT");
               setPaint("Ultra Blue");
-              setWheel("RS6One");
+              setWheel("One");
               setInterior("Black&grey");
             }}
           >
@@ -45,7 +58,7 @@ export const CarPicker: React.FC = () => {
               navigate("/Configurator");
               setCar("AUDI RS5");
               setPaint("Nardo Gay");
-              setWheel("RS5One");
+              setWheel("One");
               setInterior("Black&red");
             }}
           >
@@ -62,7 +75,7 @@ export const CarPicker: React.FC = () => {
               navigate("/Configurator");
               setCar("AUDI E-TRON GT");
               setPaint("Tactical Green");
-              setWheel("e-tronOne");
+              setWheel("One");
               setInterior("Black-1");
             }}
           >

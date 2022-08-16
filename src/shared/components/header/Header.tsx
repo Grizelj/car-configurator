@@ -6,11 +6,7 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../../../firebase";
 import { useNavigate } from "react-router-dom";
 
-interface Props {
-  onLogin: () => void;
-}
-
-export const Header: React.FC<Props> = ({ onLogin }) => {
+export const Header: React.FC<Props> = () => {
   const [opened, setOpened] = useState(false);
 
   const navigate = useNavigate();
@@ -22,6 +18,15 @@ export const Header: React.FC<Props> = ({ onLogin }) => {
   function mySavedConfig() {
     navigate("/home");
     setOpened(false);
+  }
+
+  function checker() {
+    if (window.location.pathname == "/CarPicker") {
+      <button className="navbar-button" onClick={() => navigate("/CarPicker")}>
+        Configure a car
+      </button>;
+    } else {
+    }
   }
 
   return (

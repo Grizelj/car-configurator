@@ -24,7 +24,7 @@ const Carousel: React.FC = ({}) => {
           {carousel === 0 && setCarousel(5)}
           {car === "AUDI RS6 AVANT" &&
             paint === "Ultra Blue" &&
-            wheel === "RS6One" &&
+            wheel === "One" &&
             carousel === 1 && (
               <img
                 className="carouselImg"
@@ -33,7 +33,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Ultra Blue" &&
-            wheel === "RS6One" &&
+            wheel === "One" &&
             carousel === 2 && (
               <img
                 className="carouselImg"
@@ -42,7 +42,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Ultra Blue" &&
-            wheel === "RS6One" &&
+            wheel === "One" &&
             carousel === 3 && (
               <img
                 className="carouselImg"
@@ -51,7 +51,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Ultra Blue" &&
-            wheel === "RS6One" &&
+            wheel === "One" &&
             carousel === 4 && (
               <img
                 className="carouselImg"
@@ -60,7 +60,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Ultra Blue" &&
-            wheel === "RS6One" &&
+            wheel === "One" &&
             carousel === 5 && (
               <img
                 className="carouselImg"
@@ -69,7 +69,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Ultra Blue" &&
-            wheel === "RS6Two" &&
+            wheel === "Two" &&
             carousel === 1 && (
               <img
                 className="carouselImg"
@@ -78,7 +78,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Ultra Blue" &&
-            wheel === "RS6Two" &&
+            wheel === "Two" &&
             carousel === 2 && (
               <img
                 className="carouselImg"
@@ -87,7 +87,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Ultra Blue" &&
-            wheel === "RS6Two" &&
+            wheel === "Two" &&
             carousel === 3 && (
               <img
                 className="carouselImg"
@@ -96,7 +96,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Ultra Blue" &&
-            wheel === "RS6Two" &&
+            wheel === "Two" &&
             carousel === 4 && (
               <img
                 className="carouselImg"
@@ -105,7 +105,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Ultra Blue" &&
-            wheel === "RS6Two" &&
+            wheel === "Two" &&
             carousel === 5 && (
               <img
                 className="carouselImg"
@@ -114,7 +114,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Black" &&
-            wheel === "RS6One" &&
+            wheel === "One" &&
             carousel === 1 && (
               <img
                 className="carouselImg"
@@ -123,7 +123,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Black" &&
-            wheel === "RS6One" &&
+            wheel === "One" &&
             carousel === 2 && (
               <img
                 className="carouselImg"
@@ -132,7 +132,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Black" &&
-            wheel === "RS6One" &&
+            wheel === "One" &&
             carousel === 3 && (
               <img
                 className="carouselImg"
@@ -141,7 +141,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Black" &&
-            wheel === "RS6One" &&
+            wheel === "One" &&
             carousel === 4 && (
               <img
                 className="carouselImg"
@@ -150,7 +150,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Black" &&
-            wheel === "RS6One" &&
+            wheel === "One" &&
             carousel === 5 && (
               <img
                 className="carouselImg"
@@ -159,7 +159,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Black" &&
-            wheel === "RS6Two" &&
+            wheel === "Two" &&
             carousel === 1 && (
               <img
                 className="carouselImg"
@@ -168,7 +168,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Black" &&
-            wheel === "RS6Two" &&
+            wheel === "Two" &&
             carousel === 2 && (
               <img
                 className="carouselImg"
@@ -177,7 +177,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Black" &&
-            wheel === "RS6Two" &&
+            wheel === "Two" &&
             carousel === 3 && (
               <img
                 className="carouselImg"
@@ -186,7 +186,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Black" &&
-            wheel === "RS6Two" &&
+            wheel === "Two" &&
             carousel === 4 && (
               <img
                 className="carouselImg"
@@ -195,7 +195,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Black" &&
-            wheel === "RS6Two" &&
+            wheel === "Two" &&
             carousel === 5 && (
               <img
                 className="carouselImg"
@@ -204,7 +204,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Polar White" &&
-            wheel === "RS6Two" &&
+            wheel === "Two" &&
             carousel === 1 && (
               <img
                 className="carouselImg"
@@ -213,7 +213,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Polar White" &&
-            wheel === "RS6Two" &&
+            wheel === "Two" &&
             carousel === 2 && (
               <img
                 className="carouselImg"
@@ -222,7 +222,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Polar White" &&
-            wheel === "RS6Two" &&
+            wheel === "Two" &&
             carousel === 3 && (
               <img
                 className="carouselImg"
@@ -231,7 +231,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Polar White" &&
-            wheel === "RS6Two" &&
+            wheel === "Two" &&
             carousel === 4 && (
               <img
                 className="carouselImg"
@@ -240,7 +240,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Polar White" &&
-            wheel === "RS6Two" &&
+            wheel === "Two" &&
             carousel === 5 && (
               <img
                 className="carouselImg"
@@ -249,7 +249,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Polar White" &&
-            wheel === "RS6One" &&
+            wheel === "One" &&
             carousel === 1 && (
               <img
                 className="carouselImg"
@@ -258,7 +258,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Polar White" &&
-            wheel === "RS6One" &&
+            wheel === "One" &&
             carousel === 2 && (
               <img
                 className="carouselImg"
@@ -267,7 +267,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Polar White" &&
-            wheel === "RS6One" &&
+            wheel === "One" &&
             carousel === 3 && (
               <img
                 className="carouselImg"
@@ -276,7 +276,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Polar White" &&
-            wheel === "RS6One" &&
+            wheel === "One" &&
             carousel === 4 && (
               <img
                 className="carouselImg"
@@ -285,7 +285,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS6 AVANT" &&
             paint === "Polar White" &&
-            wheel === "RS6One" &&
+            wheel === "One" &&
             carousel === 5 && (
               <img
                 className="carouselImg"
@@ -294,7 +294,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Nardo Gay" &&
-            wheel === "RS5One" &&
+            wheel === "One" &&
             carousel === 1 && (
               <img
                 className="carouselImg"
@@ -303,7 +303,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Nardo Gay" &&
-            wheel === "RS5One" &&
+            wheel === "One" &&
             carousel === 2 && (
               <img
                 className="carouselImg"
@@ -312,7 +312,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Nardo Gay" &&
-            wheel === "RS5One" &&
+            wheel === "One" &&
             carousel === 3 && (
               <img
                 className="carouselImg"
@@ -321,7 +321,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Nardo Gay" &&
-            wheel === "RS5One" &&
+            wheel === "One" &&
             carousel === 4 && (
               <img
                 className="carouselImg"
@@ -330,7 +330,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Nardo Gay" &&
-            wheel === "RS5One" &&
+            wheel === "One" &&
             carousel === 5 && (
               <img
                 className="carouselImg"
@@ -339,7 +339,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Nardo Gay" &&
-            wheel === "RS5Two" &&
+            wheel === "Two" &&
             carousel === 1 && (
               <img
                 className="carouselImg"
@@ -348,7 +348,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Nardo Gay" &&
-            wheel === "RS5Two" &&
+            wheel === "Two" &&
             carousel === 2 && (
               <img
                 className="carouselImg"
@@ -357,7 +357,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Nardo Gay" &&
-            wheel === "RS5Two" &&
+            wheel === "Two" &&
             carousel === 3 && (
               <img
                 className="carouselImg"
@@ -366,7 +366,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Nardo Gay" &&
-            wheel === "RS5Two" &&
+            wheel === "Two" &&
             carousel === 4 && (
               <img
                 className="carouselImg"
@@ -375,7 +375,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Nardo Gay" &&
-            wheel === "RS5Two" &&
+            wheel === "Two" &&
             carousel === 5 && (
               <img
                 className="carouselImg"
@@ -384,7 +384,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Tango Red" &&
-            wheel === "RS5One" &&
+            wheel === "One" &&
             carousel === 1 && (
               <img
                 className="carouselImg"
@@ -393,7 +393,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Tango Red" &&
-            wheel === "RS5One" &&
+            wheel === "One" &&
             carousel === 2 && (
               <img
                 className="carouselImg"
@@ -402,7 +402,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Tango Red" &&
-            wheel === "RS5One" &&
+            wheel === "One" &&
             carousel === 3 && (
               <img
                 className="carouselImg"
@@ -411,7 +411,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Tango Red" &&
-            wheel === "RS5One" &&
+            wheel === "One" &&
             carousel === 4 && (
               <img
                 className="carouselImg"
@@ -420,7 +420,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Tango Red" &&
-            wheel === "RS5One" &&
+            wheel === "One" &&
             carousel === 5 && (
               <img
                 className="carouselImg"
@@ -429,7 +429,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Tango Red" &&
-            wheel === "RS5Two" &&
+            wheel === "Two" &&
             carousel === 1 && (
               <img
                 className="carouselImg"
@@ -438,7 +438,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Tango Red" &&
-            wheel === "RS5Two" &&
+            wheel === "Two" &&
             carousel === 2 && (
               <img
                 className="carouselImg"
@@ -447,7 +447,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Tango Red" &&
-            wheel === "RS5Two" &&
+            wheel === "Two" &&
             carousel === 3 && (
               <img
                 className="carouselImg"
@@ -456,7 +456,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Tango Red" &&
-            wheel === "RS5Two" &&
+            wheel === "Two" &&
             carousel === 4 && (
               <img
                 className="carouselImg"
@@ -465,7 +465,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Tango Red" &&
-            wheel === "RS5Two" &&
+            wheel === "Two" &&
             carousel === 5 && (
               <img
                 className="carouselImg"
@@ -474,7 +474,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Turbo Blue" &&
-            wheel === "RS5One" &&
+            wheel === "One" &&
             carousel === 1 && (
               <img
                 className="carouselImg"
@@ -483,7 +483,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Turbo Blue" &&
-            wheel === "RS5One" &&
+            wheel === "One" &&
             carousel === 2 && (
               <img
                 className="carouselImg"
@@ -492,7 +492,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Turbo Blue" &&
-            wheel === "RS5One" &&
+            wheel === "One" &&
             carousel === 3 && (
               <img
                 className="carouselImg"
@@ -501,7 +501,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Turbo Blue" &&
-            wheel === "RS5One" &&
+            wheel === "One" &&
             carousel === 4 && (
               <img
                 className="carouselImg"
@@ -510,7 +510,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Turbo Blue" &&
-            wheel === "RS5One" &&
+            wheel === "One" &&
             carousel === 5 && (
               <img
                 className="carouselImg"
@@ -519,7 +519,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Turbo Blue" &&
-            wheel === "RS5Two" &&
+            wheel === "Two" &&
             carousel === 1 && (
               <img
                 className="carouselImg"
@@ -528,7 +528,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Turbo Blue" &&
-            wheel === "RS5Two" &&
+            wheel === "Two" &&
             carousel === 2 && (
               <img
                 className="carouselImg"
@@ -537,7 +537,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Turbo Blue" &&
-            wheel === "RS5Two" &&
+            wheel === "Two" &&
             carousel === 3 && (
               <img
                 className="carouselImg"
@@ -546,7 +546,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Turbo Blue" &&
-            wheel === "RS5Two" &&
+            wheel === "Two" &&
             carousel === 4 && (
               <img
                 className="carouselImg"
@@ -555,7 +555,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI RS5" &&
             paint === "Turbo Blue" &&
-            wheel === "RS5Two" &&
+            wheel === "Two" &&
             carousel === 5 && (
               <img
                 className="carouselImg"
@@ -564,7 +564,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI E-TRON GT" &&
             paint === "Tactical Green" &&
-            wheel === "e-tronOne" &&
+            wheel === "One" &&
             carousel === 1 && (
               <img
                 className="carouselImg"
@@ -573,7 +573,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI E-TRON GT" &&
             paint === "Tactical Green" &&
-            wheel === "e-tronOne" &&
+            wheel === "One" &&
             carousel === 2 && (
               <img
                 className="carouselImg"
@@ -582,7 +582,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI E-TRON GT" &&
             paint === "Tactical Green" &&
-            wheel === "e-tronOne" &&
+            wheel === "One" &&
             carousel === 3 && (
               <img
                 className="carouselImg"
@@ -591,7 +591,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI E-TRON GT" &&
             paint === "Tactical Green" &&
-            wheel === "e-tronOne" &&
+            wheel === "One" &&
             carousel === 4 && (
               <img
                 className="carouselImg"
@@ -600,7 +600,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI E-TRON GT" &&
             paint === "Tactical Green" &&
-            wheel === "e-tronOne" &&
+            wheel === "One" &&
             carousel === 5 && (
               <img
                 className="carouselImg"
@@ -609,7 +609,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI E-TRON GT" &&
             paint === "Tactical Green" &&
-            wheel === "e-tronTwo" &&
+            wheel === "Two" &&
             carousel === 1 && (
               <img
                 className="carouselImg"
@@ -618,7 +618,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI E-TRON GT" &&
             paint === "Tactical Green" &&
-            wheel === "e-tronTwo" &&
+            wheel === "Two" &&
             carousel === 2 && (
               <img
                 className="carouselImg"
@@ -627,7 +627,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI E-TRON GT" &&
             paint === "Tactical Green" &&
-            wheel === "e-tronTwo" &&
+            wheel === "Two" &&
             carousel === 3 && (
               <img
                 className="carouselImg"
@@ -636,7 +636,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI E-TRON GT" &&
             paint === "Tactical Green" &&
-            wheel === "e-tronTwo" &&
+            wheel === "Two" &&
             carousel === 4 && (
               <img
                 className="carouselImg"
@@ -645,7 +645,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI E-TRON GT" &&
             paint === "Tactical Green" &&
-            wheel === "e-tronTwo" &&
+            wheel === "Two" &&
             carousel === 5 && (
               <img
                 className="carouselImg"
@@ -654,7 +654,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI E-TRON GT" &&
             paint === "Florett Silver" &&
-            wheel === "e-tronOne" &&
+            wheel === "One" &&
             carousel === 1 && (
               <img
                 className="carouselImg"
@@ -663,7 +663,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI E-TRON GT" &&
             paint === "Florett Silver" &&
-            wheel === "e-tronOne" &&
+            wheel === "One" &&
             carousel === 2 && (
               <img
                 className="carouselImg"
@@ -672,7 +672,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI E-TRON GT" &&
             paint === "Florett Silver" &&
-            wheel === "e-tronOne" &&
+            wheel === "One" &&
             carousel === 3 && (
               <img
                 className="carouselImg"
@@ -681,7 +681,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI E-TRON GT" &&
             paint === "Florett Silver" &&
-            wheel === "e-tronOne" &&
+            wheel === "One" &&
             carousel === 4 && (
               <img
                 className="carouselImg"
@@ -690,7 +690,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI E-TRON GT" &&
             paint === "Florett Silver" &&
-            wheel === "e-tronOne" &&
+            wheel === "One" &&
             carousel === 5 && (
               <img
                 className="carouselImg"
@@ -699,7 +699,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI E-TRON GT" &&
             paint === "Florett Silver" &&
-            wheel === "e-tronTwo" &&
+            wheel === "Two" &&
             carousel === 1 && (
               <img
                 className="carouselImg"
@@ -708,7 +708,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI E-TRON GT" &&
             paint === "Florett Silver" &&
-            wheel === "e-tronTwo" &&
+            wheel === "Two" &&
             carousel === 2 && (
               <img
                 className="carouselImg"
@@ -717,7 +717,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI E-TRON GT" &&
             paint === "Florett Silver" &&
-            wheel === "e-tronTwo" &&
+            wheel === "Two" &&
             carousel === 3 && (
               <img
                 className="carouselImg"
@@ -726,7 +726,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI E-TRON GT" &&
             paint === "Florett Silver" &&
-            wheel === "e-tronTwo" &&
+            wheel === "Two" &&
             carousel === 4 && (
               <img
                 className="carouselImg"
@@ -735,7 +735,7 @@ const Carousel: React.FC = ({}) => {
             )}
           {car === "AUDI E-TRON GT" &&
             paint === "Florett Silver" &&
-            wheel === "e-tronTwo" &&
+            wheel === "Two" &&
             carousel === 5 && (
               <img
                 className="carouselImg"

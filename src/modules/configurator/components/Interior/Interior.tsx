@@ -19,8 +19,8 @@ const Interior: React.FC = ({}) => {
           <span
             className="arrow left"
             onClick={() => setCarousel(carousel - 1)}
-          ></span>{" "}
-          {carousel} / 2{" "}
+          ></span>
+          <span className="no_select"> {carousel} / 2 </span>
           <span
             className="arrow right"
             onClick={() => setCarousel(carousel + 1)}
@@ -67,7 +67,7 @@ const Interior: React.FC = ({}) => {
             <span>Summary </span>
           </button>
         </div>
-        {openInterior === true && <Seats />}
+        {openInterior === true && <Seats setOpen={setOpenInterior} />}
       </div>
     </div>
   );

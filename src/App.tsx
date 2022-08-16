@@ -4,7 +4,7 @@ import { Outlet, Route, Routes, useNavigate } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 import "./App.css";
 import { auth } from "./firebase";
-import { Layout } from "./shared";
+import { Header, Layout } from "./shared";
 import { CarPicker, Configurator, Home, Login, Register } from "./views";
 
 export const App: React.FC = () => {
@@ -25,14 +25,17 @@ export const App: React.FC = () => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         const uid = user.uid;
+
+        navigate("/home");
       } else {
+        navigate("/login");
       }
     });
-  });
+  }, []);
 
   return (
     <RecoilRoot>
-      <Layout onLogin={() => onLogin()}>
+      <Layout>
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />

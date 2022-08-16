@@ -2,6 +2,7 @@ import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
 } from "firebase/auth";
+import { addDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useRecoilState } from "recoil";
@@ -26,10 +27,9 @@ export const Register: React.FC = () => {
 
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        navigate("/home");
-
         const user = userCredential.user;
-        // ...
+        setUser(user.uid);
+        navigate("/home");
       })
       .catch((error) => {
         const errorCode = error.code;

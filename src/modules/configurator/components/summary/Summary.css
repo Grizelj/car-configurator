@@ -2,8 +2,7 @@
     display: flex;
     flex-direction: column;
     font-family: 'Inter-variable';
-    justify-content: space-around;
-    width: 80%;
+    width: 100%;
     animation: fadeInFromNone 0.7s ease-out;
 }
 
@@ -33,7 +32,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    border-bottom: solid 0.3px rgba(128, 128, 128, 0.596);
+    border-bottom: solid 0.3px rgba(173, 173, 173, 0.452);
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 3%;
 }
 
 .car_label div:first-child p:first-child{
@@ -52,30 +54,17 @@
 
 .configuration_details{
     display: flex;
-    flex-direction: row;  
+    flex-direction: row; 
+    width: 100%; 
+    justify-content: space-between;
 }
 
 .config_info{
     margin-left: 45px;
+    width: 20%;
 }
 
-.config_details{
-    position: absolute;
-    right: 0;
-    margin-right: 45px;
-}
 
-.config_exterior p:first-child{
-    border-bottom: solid 0.3px rgba(128, 128, 128, 0.596);
-}
-
-.config_exterior p span:first-child{
-    margin-left: -90px;
-}
-
-.config_interior p:first-child{
-    border-bottom: solid 0.3px rgba(128, 128, 128, 0.596);
-}
 
 .configurator_footer{
     position: fixed;
@@ -98,8 +87,61 @@
 
 .footer_info span:first-child{
     margin-right: 15px;
-    color: rgba(82, 82, 82, 0.5);
+    color: rgba(117, 117, 117, 0.5);
 }
+
+.config_summary{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-right: 5%;
+}
+
+.config_summary_exterior_label{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: solid 0.3px rgba(173, 173, 173, 0.452);
+}
+
+.config_summary_exterior_label button{
+    justify-content: flex-end;
+}
+.config_summary_exterior_paint{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.config_summary_exterior_paint_picker{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1%;
+}
+
+.config_summary_exterior_paint_picker_left img{
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    margin-top: 10px; 
+}
+
+.config_summary_exterior_paint_price{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 1%;
+}
+
+.config_summary_total{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15%;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
 
 .footer_save_config{
     display: flex;
@@ -107,20 +149,28 @@
     position: absolute;
     right: 0;
     align-items: flex-end;
+    height: 100%;
 }
 
 .footer_save_config p:first-child{
-    margin-right: 45px;
+    margin-right: 5px;
     text-transform: uppercase;
     color: #34348d73;
     font-size: 13px;
+}
+.footer_save_config p{
+    margin-top: 0px;
+    text-transform: uppercase;
+    font-size: 20px;
+    width: 50%;
+    margin-bottom: 1%;
 }
 .save_config_button{
     background-color: #1E1ED2;
     color: white;
     padding: 15px;
     font-family: 'Inter-variable';
-    width: 250px;
+    width: 550px;
     height: 100%;
     border: none;
     margin-top: 0px;
@@ -158,6 +208,9 @@
   }
 
 .config_edit{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     text-decoration: none;
     border: none;
     color: #1E1ED2;
@@ -165,14 +218,6 @@
     cursor: pointer;
     padding: 5px;
     margin-bottom: 5px;
-}
-
-p img{
-    border-radius: 50px;
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-    margin-top: 10px; 
 }
 
 .carouselImg{
@@ -197,6 +242,9 @@ p img{
     -webkit-transform: rotate(135deg);
   }
 
-  .total_cost{
-    margin-bottom: 100px;
+
+  .no_select{
+    user-select: none;
   }
+
+

@@ -3,18 +3,25 @@ import { useRecoilState } from "recoil";
 import { configuratorAtoms } from "../../../../../shared";
 import "./Paint.css";
 
-const Paint: React.FC = ({}) => {
+const Paint: React.FC = ({ setOpen }) => {
   const [active, setActive] = useRecoilState(configuratorAtoms.setActive);
-  const [openPaint, setOpenPaint] = useState(Boolean);
   const [car, setCar] = useRecoilState(configuratorAtoms.setCar);
   const [paint, setPaint] = useRecoilState(configuratorAtoms.setPaint);
 
   return (
     <div className="paint_car_menu">
+      <div className="paint_top_menu_header">
+        <div>Paint color</div>
+        <div
+          onClick={() => {
+            setOpen(false);
+          }}
+        >
+          X
+        </div>
+      </div>
       {car === "AUDI RS6 AVANT" && (
         <div className="paint_top_menu">
-          <p>Paint color</p>
-          <span>X</span>
           <div
             className="paint_menu_info"
             onClick={() => setPaint("Ultra Blue")}
@@ -36,7 +43,7 @@ const Paint: React.FC = ({}) => {
             className="paint_menu_info"
             onClick={() => setPaint("Polar White")}
           >
-            <img src="/Assets2/Color=Pola White.png" />
+            <img src="/Assets3/Color=Polar White.png" />
             <div>
               <p>Polar White</p>
               <p>2.500 €</p>
@@ -107,10 +114,7 @@ const Paint: React.FC = ({}) => {
           <span className="total_info">total</span>
           <span>RECOIL</span>
         </div>
-        <button
-          className="paint_next_button"
-          onClick={() => setOpenPaint(false)}
-        >
+        <button className="paint_next_button" onClick={() => setOpen(false)}>
           <span>Done </span>
         </button>
       </div>
