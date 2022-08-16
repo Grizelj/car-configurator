@@ -1,19 +1,9 @@
-import {
-  doc,
-  query,
-  collection,
-  onSnapshot,
-  deleteDoc,
-  setIndexConfiguration,
-} from "firebase/firestore";
 import Hamburger from "hamburger-react";
-import React, { useState } from "react";
+import { useState } from "react";
+import { useAlert } from "react-alert";
 import { useNavigate } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { configuratorAtoms } from "../../../shared";
-import { db } from "../../../firebase";
-import ConfigurationsCarousel from "./ConfigurationsCarousel";
-import { useAlert } from "react-alert";
 
 type Props = {
   id: string;

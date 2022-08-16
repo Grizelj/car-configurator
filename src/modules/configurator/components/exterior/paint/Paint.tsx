@@ -4,7 +4,6 @@ import { configuratorAtoms } from "../../../../../shared";
 import "./Paint.css";
 
 const Paint: React.FC = ({ setOpen }) => {
-  const [active, setActive] = useRecoilState(configuratorAtoms.setActive);
   const [car, setCar] = useRecoilState(configuratorAtoms.setCar);
   const [paint, setPaint] = useRecoilState(configuratorAtoms.setPaint);
 

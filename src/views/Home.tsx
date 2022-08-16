@@ -1,20 +1,12 @@
-import { Link, useNavigate } from "react-router-dom";
-import { useRecoilState } from "recoil";
-import { configuratorAtoms } from "../shared";
-import { auth, db } from "../firebase";
-import "./Css/empty-state.css";
-import { useEffect, useState, useContext } from "react";
-import { Configurations, Empty } from "../modules";
-import {
-  doc,
-  query,
-  collection,
-  onSnapshot,
-  deleteDoc,
-  setDoc,
-} from "firebase/firestore";
-import { createContext } from "react";
 import { onAuthStateChanged } from "firebase/auth";
+import { doc, onSnapshot } from "firebase/firestore";
+import { createContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useRecoilState } from "recoil";
+import { auth, db } from "../firebase";
+import { Configurations, Empty } from "../modules";
+import { configuratorAtoms } from "../shared";
+import "./Css/empty-state.css";
 
 interface Vehicle {
   id: string;

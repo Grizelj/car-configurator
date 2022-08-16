@@ -1,19 +1,10 @@
-import {
-  doc,
-  query,
-  collection,
-  onSnapshot,
-  deleteDoc,
-  setDoc,
-} from "firebase/firestore";
-import { useContext, useEffect, useState } from "react";
+import { doc, setDoc } from "firebase/firestore";
 import { useAlert } from "react-alert";
 import { useNavigate } from "react-router-dom";
 
 import { useRecoilState } from "recoil";
 import { db } from "../../../firebase";
 import { configuratorAtoms } from "../../../shared";
-import { VehicleContext } from "../../../views";
 import ConfigurationDisplay from "./ConfigurationDisplay";
 
 interface Vehicle {
@@ -44,7 +35,11 @@ const ConfigurationsCarousel: React.FC = ({ vehicles }) => {
     if (car) {
       navigate("/home");
       const docRef = await setDoc(doc(db, "vehicles", user), leftOverCars);
-      alert.show("You have successfully deleted car configuration!");
+      alert.show(
+        <div style={{ color: "red" }}>
+          You have successfully deleted car configuration!
+        </div>
+      );
     }
   }
   function editConfig(car) {

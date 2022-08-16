@@ -6,7 +6,7 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../../../firebase";
 import { useNavigate } from "react-router-dom";
 
-export const Header: React.FC<Props> = () => {
+export const Header: React.FC = () => {
   const [opened, setOpened] = useState(false);
 
   const navigate = useNavigate();

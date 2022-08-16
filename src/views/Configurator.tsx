@@ -1,13 +1,13 @@
-import "./Css/configurator.css";
-import Exterior from "./../modules/configurator/components/exterior/Exterior";
+import { onAuthStateChanged } from "firebase/auth";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useRecoilState } from "recoil";
+import { auth } from "../firebase";
 import Interior from "../modules/configurator/components/Interior/Interior";
 import Summary from "../modules/configurator/components/summary/Summary";
-import React, { useState, useEffect } from "react";
-import { atom, selector, useRecoilState, useRecoilValue } from "recoil";
 import { configuratorAtoms } from "../shared";
-import { useNavigate } from "react-router-dom";
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../firebase";
+import Exterior from "./../modules/configurator/components/exterior/Exterior";
+import "./Css/configurator.css";
 
 export const Configurator: React.FC = () => {
   const [active, setActive] = useRecoilState(configuratorAtoms.setActive);

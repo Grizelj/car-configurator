@@ -1,6 +1,4 @@
-import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { VehicleContext } from "../../../views";
 
 import "./Configurations.css";
 import ConfigurationsCarousel from "./ConfigurationsCarousel";

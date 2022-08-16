@@ -1,6 +1,6 @@
-import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
-import React, { useEffect, useState } from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { auth } from "../firebase";
 import { configuratorAtoms } from "../shared";
